@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpRequested = false; // set in Update(), used later
     // The methods from the next steps go here, inside the class
 
+    // Lets other scripts READ isGrounded, but not change it. => isGrounded" means "when asked, return isGrounded".
+    public bool IsGrounded => isGrounded;
+
+
 
 
     // Start runs once, just before the first frame
